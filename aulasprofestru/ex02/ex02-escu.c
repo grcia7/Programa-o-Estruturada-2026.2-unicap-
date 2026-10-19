@@ -5,7 +5,7 @@
 #define ANO_ATUAL 2026
 
 int main() {
-    int idade;
+    int idade = 0;
     do {
         printf("Digite a sua idade: ");
         scanf("%d", &idade);
