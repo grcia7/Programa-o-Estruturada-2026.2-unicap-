@@ -1,13 +1,14 @@
 # Streaming de Vídeos - Arquivos Binários em C
 
-Tipo de entrega: Individual (ou Dupla; apague a opção que não se aplica)
+Tipo de entrega: Individual
 
 Participantes:
 
-- Nome completo - RA
-- Nome completo - RA (somente se for dupla)
+- Nome completo: Eduardo José Albuquerque Garcia
+- RA: 00000863979 
 
-Vídeo de demonstração: cole aqui o link do YouTube
+
+Vídeo de demonstração: (https://youtu.be/cwcicwPSro8)
 
 ## Descrição
 
