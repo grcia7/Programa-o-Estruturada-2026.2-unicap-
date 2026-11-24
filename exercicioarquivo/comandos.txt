@@ -1,0 +1,81 @@
+=============================================================================
+ COMANDOS PARA EXECUTAR O PROGRAMA - Streaming de Videos (arquivos binarios)
+=============================================================================
+
+REQUISITOS
+  - Compilador GCC (Linux, macOS, ou MinGW/MSYS2 no Windows)
+  - Para verificar a instalacao:   gcc --version
+
+
+-----------------------------------------------------------------------------
+1) OBTER O CODIGO
+-----------------------------------------------------------------------------
+  git clone <LINK_DO_SEU_REPOSITORIO_NO_GITHUB>
+  cd <NOME_DA_PASTA_DO_REPOSITORIO>
+
+
+-----------------------------------------------------------------------------
+2) COMPILAR
+-----------------------------------------------------------------------------
+  Linux / macOS / Windows (MinGW):
+      gcc -Wall -Wextra -std=c99 -o streaming main.c
+
+  (Windows gera streaming.exe automaticamente se usar -o streaming.exe)
+      gcc -Wall -Wextra -std=c99 -o streaming.exe main.c
+
+
+-----------------------------------------------------------------------------
+3) EXECUTAR
+-----------------------------------------------------------------------------
+  Linux / macOS:
+      ./streaming
+
+  Windows (CMD ou PowerShell):
+      streaming.exe
+      (PowerShell: .\streaming.exe)
+
+
+-----------------------------------------------------------------------------
+4) USO BASICO (roteiro sugerido)
+-----------------------------------------------------------------------------
+  - Opcao 13  -> carrega dados de exemplo (6 videos e 3 usuarios)
+                 (somente se videos.bin e usuarios.bin estiverem vazios)
+  - Opcao 11  -> relatorio: usuarios e os TITULOS dos videos favoritados
+  - Opcao 12  -> relatorio: videos e os NOMES dos usuarios que favoritaram
+  - Opcoes 1 e 6   -> cadastrar video / usuario
+  - Opcoes 2, 3, 7, 8 -> buscar por ID / listar todos
+  - Opcoes 4 e 9   -> atualizar video / usuario (dados e favoritos)
+  - Opcoes 5 e 10  -> remover video / usuario
+  - Opcao 0   -> sair
+
+  Os arquivos videos.bin e usuarios.bin sao criados na pasta onde o programa
+  e executado. Eles persistem entre execucoes.
+
+
+-----------------------------------------------------------------------------
+5) RESETAR OS DADOS (apagar os arquivos binarios)
+-----------------------------------------------------------------------------
+  Linux / macOS:
+      rm -f videos.bin usuarios.bin temp.bin
+
+  Windows (CMD):
+      del videos.bin usuarios.bin temp.bin
+
+  Windows (PowerShell):
+      Remove-Item videos.bin, usuarios.bin, temp.bin -ErrorAction SilentlyContinue
+
+
+-----------------------------------------------------------------------------
+6) PUBLICAR NO GITHUB (primeira vez)
+-----------------------------------------------------------------------------
+  git init
+  git add main.c README.md comandos.txt
+  git commit -m "Streaming de videos com arquivos binarios em C"
+  git branch -M main
+  git remote add origin <LINK_DO_SEU_REPOSITORIO_NO_GITHUB>
+  git push -u origin main
+
+  (Opcional) incluir arquivos .bin ja populados para a demonstracao:
+  git add videos.bin usuarios.bin
+
+  Lembre-se de editar o README.md com: individual/dupla, nome e RA.
